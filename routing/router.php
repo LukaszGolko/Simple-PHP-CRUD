@@ -5,11 +5,11 @@
 
     $routes = 
     [
-        '/' => 'model/home.view.php',
-        '/create' => 'model/create.model.php',
-        '/read' => 'model/read.model.php',
-        '/update' => 'model/update.model.php',
-        '/delete' => 'model/delete.model.php',
+        '/' => 'controller/home.controller.php',
+        '/create' => 'controller/create.controller.php',
+        '/read' => 'controller/read.controller.php',
+        '/update' => 'controller/update.controller.php',
+        '/delete' => 'controller/delete.controller.php',
     ];
 
     function routeToController($uri, $routes) {

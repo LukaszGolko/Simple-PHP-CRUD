@@ -1,4 +1,4 @@
 <?php
     echo "Page not found";
-    require "nav.php";
+    require "partials/nav.php";
 ?>

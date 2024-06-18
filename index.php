@@ -1,3 +1,3 @@
 <?php
-    require "controller/router.php";
+    require "routing/router.php";
 ?>
