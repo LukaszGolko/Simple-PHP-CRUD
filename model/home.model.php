@@ -1,5 +1,5 @@
 <?php
     $heading = "home";
 
-    require "view/home.view.php";
+    require __DIR__ . "/../view/home.view.php";
 ?>

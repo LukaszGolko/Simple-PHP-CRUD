@@ -1,5 +1,5 @@
 <?php
     $heading = "delete";
 
-    require "view/delete.view.php";
+    require __DIR__ . "/../view/delete.view.php";
 ?>

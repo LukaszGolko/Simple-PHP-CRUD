@@ -1,6 +1,3 @@
 <?php
-
-    //form below
-
-    require "model/create.model.php";
+    require __DIR__ . "/../model/read.model.php";
 ?>

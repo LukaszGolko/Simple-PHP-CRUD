@@ -1,6 +1,3 @@
 <?php
-
-    //form below
-
-    require "model/delete.model.php";
+    require __DIR__ . "/../model/delete.model.php";
 ?>

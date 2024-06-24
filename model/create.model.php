@@ -1,5 +1,7 @@
 <?php
     $heading = "create";
     
-    require "view/create.view.php";
+    
+
+    require __DIR__ . "/../view/create.view.php";
 ?>

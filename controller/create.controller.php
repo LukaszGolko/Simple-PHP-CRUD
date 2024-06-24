@@ -1,7 +1,8 @@
 <?php
+    if(isset($_POST['name']) && isset($_POST['lastname']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
+        $name = $_POST['name'];
+        $lastname = $_POST['lastname'];
+    }
 
-    //form below
-
-
-    require "model/create.model.php";
+    require __DIR__ . "/../model/create.model.php";  
 ?>

@@ -1,5 +1,5 @@
 <?php
     $heading = "read";
 
-    require "view/read.view.php";
+    require __DIR__ . "/../view/read.view.php";
 ?>
