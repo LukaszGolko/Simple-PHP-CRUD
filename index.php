@@ -1,4 +1,5 @@
 <?php
-    require "routing/router.php";
-    var_dump(__DIR__);
-?>
+require "Database.php";
+require "routing/router.php";
+
+$db = new Database($config['database']);
