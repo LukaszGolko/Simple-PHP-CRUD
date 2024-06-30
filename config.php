@@ -2,9 +2,9 @@
 
 return [
     'database' => [
-        'host' => 'localhost',
+        'host' => 'mysql',
         'port' => 3306,
-        'dbname' => 'myapp',
+        'dbname' => 'exampledb',
         'charset' => 'utf8mb4'
     ],
 ];

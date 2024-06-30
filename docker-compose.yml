@@ -15,12 +15,12 @@ services:
     volumes:
       - './pcdb:/var/lib/mysql'
     environment:
-            MYSQL_ROOT_PASSWORD: password
-            MYSQL_ROOT_HOST: localhost
-            MYSQL_DATABASE: exampledb
-            MYSQL_USER: exampleuser
-            MYSQL_PASSWORD: userpassword
-            MYSQL_ALLOW_EMPTY_PASSWORD: 0
+            MYSQL_ROOT_PASSWORD: 'password'
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: 'exampledb'
+            MYSQL_USER: 'exampleuser'
+            MYSQL_PASSWORD: 'userpassword'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
     ports:
       - "3306:3306"
     networks:
