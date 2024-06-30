@@ -19,6 +19,8 @@ class Database
 
         $statement->execute($params);
 
+        // var_dump($statement);
+
         return $statement;
     }
 }
