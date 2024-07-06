@@ -1,8 +1,11 @@
 <?php
+
+    $heading = "create";
+
     if(isset($_POST['name']) && isset($_POST['lastname']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
-        $name = $_POST['name'];
-        $lastname = $_POST['lastname'];
+        require __DIR__ . "/../model/create.model.php";
+        $openModel = true;
     }
 
-    require __DIR__ . "/../model/create.model.php";  
+    require __DIR__ . "/../view/create.view.php";  
 ?>

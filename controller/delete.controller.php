@@ -1,6 +1,7 @@
 <?php
+$heading = "delete";
+if (isset($_POST['id']) || isset($_POST['name']) || isset($_POST['lastname']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
     require __DIR__ . "/../model/delete.model.php";
-    if(isset($_POST['id']) || isset($_POST['name']) || isset($_POST['lastname']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
-        
-    }
-?>
+    $openModel = true;
+}
+require __DIR__ . "/../view/delete.view.php";
