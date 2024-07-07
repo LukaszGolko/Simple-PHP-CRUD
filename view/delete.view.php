@@ -10,7 +10,22 @@ require "view/partials/nav.php";
     <input type="submit" value="SEARCH">
 </form>
 <?php
-foreach()
+if (isset($openModel)) {
+    echo "<table>";
+    echo "<tr>";
+    echo "<th>ID</th>";
+    echo "<th>Name</th>";
+    echo "<th>Lastname</th>";
+    echo "</tr>";
+    for($x = 0; $x <= count($executeQuery);$x++ ) {
+        echo "<tr>";
+        echo "<td>" . $executeQuery['id'] . "</td>";
+        echo "<td>" . $executeQuery['name'] . "</td>";
+        echo "<td>" . $executeQuery['lastName'] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+}
 ?>
 
 
