@@ -13,18 +13,11 @@ require "view/partials/nav.php";
 if (isset($openModel)) {
     echo "<table>";
     echo "<tr>";
-    echo "<th>ID</th>";
-    echo "<th>Name</th>";
-    echo "<th>Lastname</th>";
+    echo '<th>ID</th>';
+    echo '<th>Name</th>';
+    echo '<th>Last Name</th>';
     echo "</tr>";
-    for($x = 0; $x <= count($executeQuery);$x++ ) {
-        echo "<tr>";
-        echo "<td>" . $executeQuery['id'] . "</td>";
-        echo "<td>" . $executeQuery['name'] . "</td>";
-        echo "<td>" . $executeQuery['lastName'] . "</td>";
-        echo "</tr>";
-    }
-    echo "</table>";
+    echo "table";
 }
 ?>
 

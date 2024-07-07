@@ -6,4 +6,5 @@ $name = $_POST['name'];
 $lastname = $_POST['lastname'];
 
 $query = "SELECT id, name, lastName FROM users WHERE id LIKE :id OR name LIKE :name OR lastName LIKE :lastname;";
-$executeQuery = $db->query($query, [':id' => $id, ':name' => $name, 'lastname' => $lastname])->fetchALL();
+$executeQuery = $db->query($query, [':id' => $id, ':name' => $name, 'lastname' => $lastname])->fetchAll();
+var_dump($executeQuery);

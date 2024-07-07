@@ -1,4 +1,2 @@
-kontroler patrzy czy sa dane 
-i jesli są żada modela jesli nie to nie żada modela. wymaga widoku
-ale czy bedzie czytać w modelu?
-i czy z modelu bedzie cztytac w widoku.
+I have to make "/create" more flexible. when someone adds new column to table it should apper.
+today is 07.07.2024 dd/mm/yyyy 21:26
