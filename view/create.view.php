@@ -20,9 +20,9 @@ if(isset($openModel)){
             echo "<th>Lastname</th>";
             echo "</tr>";
             echo "<tr>";
-            echo "<td>" . $executeQueryWhetherUserExists['id'] . "</td>";
-            echo "<td>" . $executeQueryWhetherUserExists['name'] . "</td>";
-            echo "<td>" . $executeQueryWhetherUserExists['lastName'] . "</td>";
+            echo "<td>" . htmlspecialchars($executeQueryWhetherUserExists['id']) . "</td>";
+            echo "<td>" . htmlspecialchars($executeQueryWhetherUserExists['name']) . "</td>";
+            echo "<td>" . htmlspecialchars($executeQueryWhetherUserExists['lastName']) . "</td>";
             echo "</tr>";
             echo "</table>";
             echo "This user already exists!";
@@ -36,9 +36,9 @@ if(isset($openModel)){
         echo "<th>Lastname</th>";
         echo "</tr>";
         echo "<tr>";
-        echo "<td>" . $newlyRegisteredUser['id'] . "</td>";
-        echo "<td>" . $newlyRegisteredUser['name'] . "</td>";
-        echo "<td>" . $newlyRegisteredUser['lastName'] . "</td>";
+        echo "<td>" . htmlspecialchars($newlyRegisteredUser['id']) . "</td>";
+        echo "<td>" . htmlspecialchars($newlyRegisteredUser['name']) . "</td>";
+        echo "<td>" . htmlspecialchars($newlyRegisteredUser['lastName']) . "</td>";
         echo "</tr>";
         echo "</table>";
         echo "This user has been created!";

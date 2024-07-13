@@ -17,7 +17,21 @@ if (isset($openModel)) {
     echo '<th>Name</th>';
     echo '<th>Last Name</th>';
     echo "</tr>";
-    echo "table";
+
+    foreach ($executeQuery as $innerArray) {
+        echo "<tr>";
+        foreach ($innerArray as $valuesOfInnerArray) {
+            echo "<td>" . htmlspecialchars($valuesOfInnerArray) . "</td>";
+        }
+        echo "<td>";
+        echo "<form method='POST' action='/delete'>";
+        echo "<input type='hidden' name='deleterecord' value='" . htmlspecialchars($innerArray['id']) . "'";
+        echo "<input type='submit' value='DELETE'>";
+        echo "</form>";
+        echo "<td>";
+        echo "</tr>";
+    }
+    echo "</table>";
 }
 ?>
 
