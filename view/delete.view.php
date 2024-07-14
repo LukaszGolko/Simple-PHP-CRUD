@@ -10,7 +10,7 @@ require "view/partials/nav.php";
     <input type="submit" value="SEARCH">
 </form>
 <?php
-if (isset($openModel)) {
+if (isset($executeQuery)) {
     echo "<table>";
     echo "<tr>";
     echo '<th>ID</th>';
@@ -25,13 +25,16 @@ if (isset($openModel)) {
         }
         echo "<td>";
         echo "<form method='POST' action='/delete'>";
-        echo "<input type='hidden' name='deleterecord' value='" . htmlspecialchars($innerArray['id']) . "'";
+        echo "<input type='hidden' name='deleterecord' value='" . $innerArray['id'] . "'>";
         echo "<input type='submit' value='DELETE'>";
         echo "</form>";
         echo "<td>";
         echo "</tr>";
     }
     echo "</table>";
+}
+if(isset($RecordDeleted)){
+    echo "Record" . " " . $executeQueryToShowRecordToDeleted['id'] . " " . $executeQueryToShowRecordToDeleted['name']. " " . $executeQueryToShowRecordToDeleted['lastName'] . " " . "has been deleted!";
 }
 ?>
 
