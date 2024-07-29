@@ -4,9 +4,9 @@ require "view/partials/banner.php";
 require "view/partials/nav.php";
 ?>
 <form action="/delete" method="POST">
-    ID<input type="number" name="id"><br>
-    Name<input type="text" name="name"><br>
-    Last name<input type="text" name="lastname"><br>
+    ID<input type="number" name="id" value="<?php echo isset($_POST['id']) ? htmlspecialchars($_POST['id']) : ''; ?>"><br>
+    Name<input type="text" name="name" value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>"><br>
+    Last name<input type="text" name="lastname" value="<?php echo isset($_POST['lastname']) ? htmlspecialchars($_POST['lastname']) : ''; ?>"><br>
     <input type="submit" value="SEARCH">
 </form>
 <?php
@@ -25,7 +25,9 @@ if (isset($executeQuery)) {
         }
         echo "<td>";
         echo "<form method='POST' action='/delete'>";
-        echo "<input type='hidden' name='deleterecord' value='" . $innerArray['id'] . "'>";
+        echo "<input type='hidden' name='deleterecord' value='" . htmlspecialchars($innerArray['id']) . "'>";
+        echo "<input type='hidden' name='nameToShowAfterDeletion' value='" . htmlspecialchars($innerArray['name']) . "'>";
+        echo "<input type='hidden' name='lastnameToShowAfterDeletion' value='" . htmlspecialchars($innerArray['lastName']) . "'>";
         echo "<input type='submit' value='DELETE'>";
         echo "</form>";
         echo "<td>";
@@ -33,8 +35,8 @@ if (isset($executeQuery)) {
     }
     echo "</table>";
 }
-if(isset($RecordDeleted)){
-    echo "Record" . " " . $executeQueryToShowRecordToDeleted['id'] . " " . $executeQueryToShowRecordToDeleted['name']. " " . $executeQueryToShowRecordToDeleted['lastName'] . " " . "has been deleted!";
+if(isset($executeQueryToDeleteREcord)){
+    echo "Record" . " " . htmlspecialchars($executeQueryToShowRecordToDeleted['id']) . " " . htmlspecialchars($executeQueryToShowRecordToDeleted['name']) . " " . htmlspecialchars($executeQueryToShowRecordToDeleted['lastName']) . " " . "has been deleted!";
 }
 ?>
 
