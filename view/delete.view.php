@@ -26,8 +26,9 @@ if (isset($executeQuery)) {
         echo "<td>";
         echo "<form method='POST' action='/delete'>";
         echo "<input type='hidden' name='deleterecord' value='" . htmlspecialchars($innerArray['id']) . "'>";
-        echo "<input type='hidden' name='nameToShowAfterDeletion' value='" . htmlspecialchars($innerArray['name']) . "'>";
-        echo "<input type='hidden' name='lastnameToShowAfterDeletion' value='" . htmlspecialchars($innerArray['lastName']) . "'>";
+        echo "<input type='hidden' name='id' value='" . htmlspecialchars($_POST['id'] ?? '') . "'>";
+        echo "<input type='hidden' name='name' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
+        echo "<input type='hidden' name='lastname' value='" . htmlspecialchars($_POST['lastname'] ?? '') . "'>";
         echo "<input type='submit' value='DELETE'>";
         echo "</form>";
         echo "<td>";
