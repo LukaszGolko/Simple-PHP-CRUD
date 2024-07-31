@@ -1,1 +1,1 @@
-in delete model i must save it to one variable before delete record query
+Table shows even query retuns empty array. it should not. this mistake shows in read and delte. today is 31.07.2024
