@@ -1,16 +1,16 @@
 <?php
-    require "view/partials/head.php";
-    require "view/partials/banner.php";
-    require "view/partials/nav.php";
+require "view/partials/head.php";
+require "view/partials/banner.php";
+require "view/partials/nav.php";
 ?>
-    <form action="/read" method="POST">
-    ID<input type="number" name="id"><br>
-    Name<input type="text" name="name"><br>
-    Last name<input type="text" name="lastname"><br>
+<form action="/read" method="POST">
+    ID<input type="number" name="id" value="<?php echo isset($_POST['id']) ? htmlspecialchars($_POST['id']) : ''; ?>"><br>
+    Name<input type="text" name="name" value="<?php echo isset($_POST['name']) ? htmlspecialchars($_POST['name']) : ''; ?>"><br>
+    Last name<input type="text" name="lastname" value="<?php echo isset($_POST['lastname']) ? htmlspecialchars($_POST['lastname']) : ''; ?>"><br>
     <input type="submit" value="SEARCH">
 </form>
 <?php
-if (isset($executeQuery)) {
+if (!empty($executeQuery)) {
     echo "<table>";
     echo "<tr>";
     echo '<th>ID</th>';
@@ -26,6 +26,8 @@ if (isset($executeQuery)) {
         echo "</tr>";
     }
     echo "</table>";
-}    
-    require "view/partials/footer.php";
+} else {
+    echo "There are no such records.";
+}
+require "view/partials/footer.php";
 ?>
