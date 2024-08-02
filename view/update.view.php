@@ -26,7 +26,7 @@ if (!empty($executeQuery)) {
         }
         echo "<td>";
         echo "<form method='POST' action='/update'>";
-        echo "<input type='number' name='idUpdate' value='" . htmlspecialchars($_POST['id'] ?? '') . "'>";
+        echo "<input type='text' name='idToCheck' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
         echo "<input type='text' name='nameUpdate' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
         echo "<input type='text' name='lastnameUpdate' value='" . htmlspecialchars($_POST['lastname'] ?? '') . "'>";
         echo "<input type='submit' value='UPDATE'>";
