@@ -26,9 +26,9 @@ if (!empty($executeQuery)) {
         }
         echo "<td>";
         echo "<form method='POST' action='/update'>";
-        echo "<input type='text' name='idToCheck' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
-        echo "<input type='text' name='nameUpdate' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
-        echo "<input type='text' name='lastnameUpdate' value='" . htmlspecialchars($_POST['lastname'] ?? '') . "'>";
+        echo "<input type='hidden' name='idToCheck' value='" . htmlspecialchars($innerArray['id']) . "'>";
+        echo "<input type='text' name='nameUpdate'>";
+        echo "<input type='text' name='lastnameUpdate'>";
         echo "<input type='submit' value='UPDATE'>";
         echo "</form>";
         echo "<td>";
@@ -37,6 +37,9 @@ if (!empty($executeQuery)) {
     echo "</table>";
 }else{
     echo "There are no such recors.";
+}
+if($toShowInView){
+    echo "User<br>" . $executeQueryToShowRecordBeforeUpdate['id'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['name'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['lastName'] . "<br>" . "has been changed to<br>" . $executeQueryToShowRecordAfterUpdate['id'] . "<br>" . $executeQueryToShowRecordAfterUpdate['name'] . "<br>" . $executeQueryToShowRecordAfterUpdate['lastName'];
 }
 ?>
 
