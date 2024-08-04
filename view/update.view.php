@@ -11,6 +11,7 @@ require "view/partials/nav.php";
     <input type="submit" value="SEARCH">
 </form>
 <?php
+if(isset($executeQuery)){
 if (!empty($executeQuery)) {
     echo "<table>";
     echo "<tr>";
@@ -26,9 +27,10 @@ if (!empty($executeQuery)) {
         }
         echo "<td>";
         echo "<form method='POST' action='/update'>";
-        echo "<input type='hidden' name='idToCheck' value='" . htmlspecialchars($innerArray['id']) . "'>";
-        echo "<input type='text' name='nameUpdate'>";
-        echo "<input type='text' name='lastnameUpdate'>";
+        echo "<input type='hidden' name='idToUpdate' value='".$innerArray['id']."'>";
+        echo "<input type='hidden' name='id' value='" . htmlspecialchars($_POST['id'] ?? '') . "'>";
+        echo "<input type='text' name='name'>";
+        echo "<input type='text' name='lastname'>";
         echo "<input type='submit' value='UPDATE'>";
         echo "</form>";
         echo "<td>";
@@ -38,7 +40,8 @@ if (!empty($executeQuery)) {
 }else{
     echo "There are no such recors.";
 }
-if($toShowInView){
+}
+if(isset($toShowInView)){
     echo "User<br>" . $executeQueryToShowRecordBeforeUpdate['id'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['name'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['lastName'] . "<br>" . "has been changed to<br>" . $executeQueryToShowRecordAfterUpdate['id'] . "<br>" . $executeQueryToShowRecordAfterUpdate['name'] . "<br>" . $executeQueryToShowRecordAfterUpdate['lastName'];
 }
 ?>
