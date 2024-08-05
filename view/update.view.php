@@ -28,9 +28,11 @@ if (!empty($executeQuery)) {
         echo "<td>";
         echo "<form method='POST' action='/update'>";
         echo "<input type='hidden' name='idToUpdate' value='".$innerArray['id']."'>";
+        echo "<input type='text' name='nameToUpdate'>";
+        echo "<input type='text' name='lastNameToUpdate'>";
         echo "<input type='hidden' name='id' value='" . htmlspecialchars($_POST['id'] ?? '') . "'>";
-        echo "<input type='text' name='name'>";
-        echo "<input type='text' name='lastname'>";
+        echo "<input type='hidden' name='name' value='" . htmlspecialchars($_POST['name'] ?? '') . "'>";
+        echo "<input type='hidden' name='lastname' value='" . htmlspecialchars($_POST['lastname'] ?? '') . "'>";
         echo "<input type='submit' value='UPDATE'>";
         echo "</form>";
         echo "<td>";
@@ -42,7 +44,7 @@ if (!empty($executeQuery)) {
 }
 }
 if(isset($toShowInView)){
-    echo "User<br>" . $executeQueryToShowRecordBeforeUpdate['id'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['name'] . "<br>" . $executeQueryToShowRecordBeforeUpdate['lastName'] . "<br>" . "has been changed to<br>" . $executeQueryToShowRecordAfterUpdate['id'] . "<br>" . $executeQueryToShowRecordAfterUpdate['name'] . "<br>" . $executeQueryToShowRecordAfterUpdate['lastName'];
+    echo "User ID:<br>" . $executeQueryToShowRecordBeforeUpdate['id'] . "<br>Name:" . $executeQueryToShowRecordBeforeUpdate['name'] . "<br>Last name" . $executeQueryToShowRecordBeforeUpdate['lastName'] . "<br>" . "has been changed to<br>ID:" . $executeQueryToShowRecordAfterUpdate['id'] . "<br>Name:" . $executeQueryToShowRecordAfterUpdate['name'] . "<br>Last name:" . $executeQueryToShowRecordAfterUpdate['lastName'];
 }
 ?>
 

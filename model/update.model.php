@@ -3,25 +3,24 @@
 
     if (isset($_POST['id']) || isset($_POST['name']) || isset($_POST['lastname'])) {
         $id = $_POST['id'];
-        if(isset($_POST['name']) && isset($_POST['lastname'])){
         $name = $_POST['name'];
         $lastname = $_POST['lastname'];
-    }
     
-        if (isset($_POST['idToUpdate'])) {
+        if (isset($_POST['idToUpdate']) || isset($_POST['nameToUpdate']) || isset($_POST['lastNameToUpdate'])) {
 
-            $RecordNameToUpdate = $_POST['nameUpdate'];
-            $RecordLastNameToUpdate = $_POST['lastnameUpdate'];
+            $idToUpdate = $_POST['idToUpdate'];
+            $nameToUpdate = $_POST['nameToUpdate'];
+            $lastNameToUpdate = $_POST['lastNameToUpdate'];
 
             $queryToShowRecordBeforeUpdate = "SELECT id, name, lastName FROM users WHERE id = :id";
-            $executeQueryToShowRecordBeforeUpdate = $db->query($queryToShowRecordBeforeUpdate, [':id' => $id])->fetch();
+            $executeQueryToShowRecordBeforeUpdate = $db->query($queryToShowRecordBeforeUpdate, [':id' => $idToUpdate])->fetch();
 
             $queryToUpdateRecord = "UPDATE users SET name = :nameToUpdate, lastName = :lastNameToUpdate WHERE id = :id;";
-            $executeQueryToUpdateRecord = $db->query($queryToUpdateRecord, [':nameToUpdate' => $RecordNameToUpdate, ':lastNameToUpdate' => $RecordLastNameToUpdate, ':id' => $id]);
+            $executeQueryToUpdateRecord = $db->query($queryToUpdateRecord, [':nameToUpdate' => $nameToUpdate, ':lastNameToUpdate' => $lastNameToUpdate, ':id' => $idToUpdate]);
             // var_dump($executeQueryToDeleteREcord);
 
             $queryToShowRecordAfterUpdate = "SELECT id, name, lastName FROM users WHERE id = :id";
-            $executeQueryToShowRecordAfterUpdate = $db->query($queryToShowRecordAfterUpdate, [':id' => $id])->fetch();
+            $executeQueryToShowRecordAfterUpdate = $db->query($queryToShowRecordAfterUpdate, [':id' => $idToUpdate])->fetch();
 
             $toShowInView = true;
 
