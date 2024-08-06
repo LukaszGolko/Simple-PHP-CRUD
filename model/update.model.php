@@ -22,8 +22,6 @@
             $queryToShowRecordAfterUpdate = "SELECT id, name, lastName FROM users WHERE id = :id";
             $executeQueryToShowRecordAfterUpdate = $db->query($queryToShowRecordAfterUpdate, [':id' => $idToUpdate])->fetch();
 
-            $toShowInView = true;
-
         }
         $query = "SELECT id, name, lastName FROM users WHERE id LIKE :id OR name LIKE :name OR lastName LIKE :lastname;";
         $executeQuery = $db->query($query, [':id' => $id, ':name' => $name, ':lastname' => $lastname])->fetchAll();

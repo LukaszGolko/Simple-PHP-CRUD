@@ -43,7 +43,7 @@ if (!empty($executeQuery)) {
     echo "There are no such recors.";
 }
 }
-if(isset($toShowInView)){
+if(isset($executeQueryToShowRecordAfterUpdate)){
     echo "User ID:<br>" . $executeQueryToShowRecordBeforeUpdate['id'] . "<br>Name:" . $executeQueryToShowRecordBeforeUpdate['name'] . "<br>Last name" . $executeQueryToShowRecordBeforeUpdate['lastName'] . "<br>" . "has been changed to<br>ID:" . $executeQueryToShowRecordAfterUpdate['id'] . "<br>Name:" . $executeQueryToShowRecordAfterUpdate['name'] . "<br>Last name:" . $executeQueryToShowRecordAfterUpdate['lastName'];
 }
 ?>
