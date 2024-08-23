@@ -10,6 +10,7 @@ require "view/partials/nav.php";
     <input type="submit" value="SEARCH">
 </form>
 <?php
+if(isset($executeQuery)){
 if (!empty($executeQuery)) {
     echo "<table>";
     echo "<tr>";
@@ -37,6 +38,7 @@ if (!empty($executeQuery)) {
     echo "</table>";
 }else{
     echo "There are no such recors.";
+}
 }
 if(isset($executeQueryToDeleteREcord)){
     echo "Record" . "<br>ID: " . htmlspecialchars($executeQueryToShowRecordToDeleted['id']) . "<br>Name: " . htmlspecialchars($executeQueryToShowRecordToDeleted['name']) . "<br>Lastname: " . htmlspecialchars($executeQueryToShowRecordToDeleted['lastName']) . "<br>" . "has been deleted!";

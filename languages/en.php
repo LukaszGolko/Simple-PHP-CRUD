@@ -9,5 +9,13 @@ return [
  6 => "There are no such records.",
  7 => "Record",
  8 => "has been deleted!",
- 9 => "has been changed to"
+ 9 => "has been changed to",
+ 10 => "Home",
+ 11 => "Create",
+ 12 => "Read",
+ 13 => "Update",
+ 14 => "Delete",
+ 15 => "Simple",
+ 16 => "Welcome to the",
+ 17 => "page"
 ];

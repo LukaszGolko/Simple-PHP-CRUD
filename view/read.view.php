@@ -10,6 +10,7 @@ require "view/partials/nav.php";
     <input type="submit" value="SEARCH">
 </form>
 <?php
+if(isset($executeQuery)){
 if (!empty($executeQuery)) {
     echo "<table>";
     echo "<tr>";
@@ -28,6 +29,7 @@ if (!empty($executeQuery)) {
     echo "</table>";
 } else {
     echo "There are no such records.";
+}
 }
 require "view/partials/footer.php";
 ?>
