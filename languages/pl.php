@@ -10,7 +10,7 @@ return [
  7 => "Rekord",
  8 => "został usunięty!",
  9 => "został zmieniony na",
- 10 => "Strona Główna",
+ 10 => "głównej",
  11 => "Stwórz",
  12 => "Odczytaj",
  13 => "Zaktualizuj",

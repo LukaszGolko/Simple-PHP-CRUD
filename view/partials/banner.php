@@ -1,3 +1,3 @@
 <header>
-    <h1>Welcome to the <?= $heading ?> page!</h1>\
+    <h1><?=$language[16] . " " . $heading . " " . $language[17]?><h1>
 </header>

@@ -1,3 +1,6 @@
 <?php
-    require __DIR__ . '/../model/home.model.php';
-?>
+
+// require __DIR__ . '/../model/home.model.php';
+
+$heading = $language[10];
+require __DIR__ . "/../view/home.view.php";
