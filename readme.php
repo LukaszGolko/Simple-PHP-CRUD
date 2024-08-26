@@ -1,1 +1,2 @@
-something is not ok with laguages. today 21:59 24.08.2024
+it does not make sense to do this project without oop
+today 21:26 26.08.2024

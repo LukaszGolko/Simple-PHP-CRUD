@@ -1,5 +1,5 @@
 <?php
-
+    global $language;
     $heading = "create";
 
     if(isset($_POST['name']) && isset($_POST['lastname']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
