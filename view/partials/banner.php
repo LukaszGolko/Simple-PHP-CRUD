@@ -1,3 +1,3 @@
 <header>
-    <h1><?=$language[16] . " " . $heading . " " . $language[17]?><h1>
+    <h1><?=$userLanguage[16] . " " . $heading . " " . $userLanguage[17]?><h1>
 </header>
