@@ -1,8 +1,8 @@
 <form action="/" method="POST">
     <label for="language">
         <select name="language">
-            <option value="en">English</option>
-            <option value="pl">Polski</option>
+            <option value="en" <?= isset($selectedLanguage) && $selectedLanguage === 'en' ? 'selected' : '' ?>>English</option>
+            <option value="pl" <?= isset($selectedLanguage) && $selectedLanguage === 'pl' ? 'selected' : '' ?>>Polski</option>
         </select>
     </label>
     <button type="submit">Submit</button>

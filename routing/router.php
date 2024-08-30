@@ -1,7 +1,7 @@
 <?php
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-var_dump($uri);
+// var_dump($uri);
 
 $routes =
     [
